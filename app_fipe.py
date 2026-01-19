@@ -2,9 +2,9 @@ import streamlit as st
 import requests
 
 # 1. Configuração da Página
-st.set_page_config(page_title="Consultor FIPE Hub Segs", page_icon="🚗")
+st.set_page_config(page_title="Consultor FIPE", page_icon="🚗")
 
-st.title("🚗 Consultor FIPE Hub Segs")
+st.title("🚗 Consultor FIPE")
 st.write("Digite o código FIPE e o Ano do modelo para buscar o valor exato.")
 
 # 2. As Caixas de Entrada (Inputs lado a lado)
@@ -76,3 +76,6 @@ if st.button("Consultar Preço"):
             st.error(f"Erro de conexão: {e}")
     else:
         st.warning("⚠️ Por favor, digite um código FIPE antes de clicar.")
+
+st.markdown("---")
+st.caption("Desenvolvido por Diego Menezes | Dados fornecidos pela BrasilAPI")
